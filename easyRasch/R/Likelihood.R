@@ -15,7 +15,6 @@
 #' Trump <- new("Rasch", name = "Trump", a = -3:3, y = c(1, 1, 0, 0, 1, 0, 1))
 #' theta <- 1
 #' LikelihoodRasch(Trump, theta)
-#' @seealso \code{\link{Probability}}
 #' @rdname LikelihoodRasch
 #' @aliases LikelihoodRasch,ANY-method
 #' @export

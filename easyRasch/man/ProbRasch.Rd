@@ -32,7 +32,4 @@ ProbRasch(Trump, theta)
 \author{
 Luwei Ying
 }
-\seealso{
-\code{\link{Rasch_class}}
-}
 

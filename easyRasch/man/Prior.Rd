@@ -15,7 +15,7 @@ The output containing
  \item{h}{The height of the specified normal curve evaluated at theta}
 }
 \description{
-Calculate the heightof the normal curve, given our believe that the prior is 
+Calculate the height of the normal curve, given our believe that the prior is 
 always going to be a normal distribution
 }
 \note{

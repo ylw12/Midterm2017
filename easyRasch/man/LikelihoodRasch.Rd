@@ -32,7 +32,4 @@ LikelihoodRasch(Trump, theta)
 \author{
 Luwei Ying
 }
-\seealso{
-\code{\link{Probability}}
-}
 

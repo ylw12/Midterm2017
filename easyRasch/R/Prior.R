@@ -1,6 +1,6 @@
 #' Calculate the prior
 #'
-#' Calculate the heightof the normal curve, given our believe that the prior is 
+#' Calculate the height of the normal curve, given our believe that the prior is 
 #' always going to be a normal distribution
 #'
 #' @param theta A proposed value of theta.
