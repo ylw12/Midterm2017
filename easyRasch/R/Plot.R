@@ -3,8 +3,8 @@
 #' Take in a Rasch object and create a plot with several parameters
 #'
 #' @param raschObj An object of class Rasch
-#' @param lower The lower limites of integration
-#' @param upper The upper limites of integration
+#' @param lower The lower limit of integration
+#' @param upper The upper limit of integration
 #' @param EAP whether to have EAP added to the plot
 #'
 #' @author Luwei Ying
@@ -51,3 +51,9 @@ setMethod(f="PlotRasch",
             }
           }
 )
+
+# For reference-------------
+text(-2, 0.3, expression(f(x) == paste(frac(1, sqrt(2 * pi * sigma^2)),
+                                       " ", e^{
+                                         frac(-(x - mu)^2, 2 * sigma^2)
+                                       })), cex = 1.2)
