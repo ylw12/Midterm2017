@@ -26,8 +26,11 @@ setGeneric(name="LikelihoodRasch",
 #' @export
 setMethod(f="LikelihoodRasch",
           definition=function(raschObj, theta){
+            # The probability of getting right
             P <- exp(theta - raschObj@a)/(1 + exp(theta - raschObj@a))
+            # The probability of getting wrong
             Q <- 1-P
+            # The joint probability
             Likelihood <- prod(P^raschObj@y * Q^(1-raschObj@y))
             return(Likelihood)
           }

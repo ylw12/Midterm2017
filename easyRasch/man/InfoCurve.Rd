@@ -24,7 +24,7 @@ This function is created to visualize the Fisher's Information
 \examples{
 
 Trump <- new("Rasch", name = "Trump", a = -3:3, y = c(1, 1, 0, 0, 1, 0, 1))
-PlotRasch(Trump)
+InfoCurve(Trump)
 }
 \author{
 Luwei Ying

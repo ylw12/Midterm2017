@@ -26,9 +26,12 @@ setGeneric(name="EAPRasch",
 #' @export
 setMethod(f="EAPRasch",
           definition=function(raschObj, lower=-6, upper=6){
+            # Use Vectorize() as suggested by the help file. This avoids the problem 
+            # when plotting for different respondents.
             int <- integrate(Vectorize(function(x) LikelihoodRasch(raschObj, x)*Prior(x)),
                               lower = lower,
                               upper = upper)
+            # We are only interested in the value
             return(int["value"])
           }
           )

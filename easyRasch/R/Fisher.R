@@ -27,6 +27,7 @@ setMethod(f="FisherTasch",
           definition=function(raschObj, theta){
             P <- exp(theta - raschObj@a)/(1 + exp(theta - raschObj@a))
             Q <- 1-P
+            # As formula 4 suggested
             I <- P*Q
             return(I)
           }

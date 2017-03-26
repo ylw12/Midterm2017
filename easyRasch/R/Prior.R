@@ -24,6 +24,7 @@ setGeneric(name="Prior",
 #' @export
 setMethod(f="Prior",
           definition=function(theta){
+            # Biscally speaking, our prior function is the same as dnorm.
             h <- dnorm(x = theta, mean = 0, sd = 3)
             return(h)
           }

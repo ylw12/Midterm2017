@@ -25,16 +25,20 @@ theta <- seq(-4, 7, by = 0.001)
 #' @export
 setMethod(f="PlotRasch",
           definition=function(raschObj, lower=-6, upper=6, EAP=TRUE){
+            # Define a lot of thetas, find the probability of each of them.
             theta <- seq(lower, upper, by = 0.001)
             prob <- sapply(theta, function(x) exp(x - raschObj@a)/(1 + exp(x - raschObj@a)))
+            # Plot a NULL
             plot(NULL,
                  xlim = c(lower, upper),
                  ylim = c(0, 1),
                  xlab = "Theta",
                  ylab = "Probability of getting the question corect",
                  main = paste("Item Characteristic Curve for", raschObj@name))
+            # Add the curve for each test
             sapply(1:length(raschObj@a), 
                    function(x) lines(theta, prob[x, ], lty = 1))
+            # Users can choose whether to add EAP
             if (EAP) {
               abline(v = EAPRasch(raschObj, lower, upper), lty = 2)
               text(-3, 0.7, 
