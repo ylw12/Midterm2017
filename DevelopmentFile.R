@@ -13,7 +13,7 @@ create("easyRasch")
 
 # Now, go to the R folder to create the *.R files.
 
-# This can be run many times as the code is updated
+# Run this every time when I update the code
 current.code <- as.package("easyRasch")
 load_all(current.code)
 document(current.code)
