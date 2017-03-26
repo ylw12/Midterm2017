@@ -12,7 +12,7 @@
 #' @examples
 #' 
 #' Trump <- new("Rasch", name = "Trump", a = -3:3, y = c(1, 1, 0, 0, 1, 0, 1))
-#' PlotRasch(Trump)
+#' InfoCurve(Trump)
 #' @rdname InfoCurve
 #' @aliases InfoCurve,ANY-method
 #' @export
@@ -32,6 +32,6 @@ setMethod(f="InfoCurve",
                  ylab = "The total Information",
                  main = paste("Information Cure for in testing", raschObj@name),
                  type = "l")
-            #text(4, 0.8, paste("The sum of", expression(I_i* theta_j), cex = 0.8)
+            #text(4, 0.8, paste("The sum of", expression(I_i* theta), cex = 0.8)
           }
 )

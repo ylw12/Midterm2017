@@ -18,9 +18,34 @@ current.code <- as.package("easyRasch")
 load_all(current.code)
 document(current.code)
 
-# --------------Code for reference------------------
+# -------------- Test the Functions in the Package ------------------
 
-PlotRasch(Trump)
+# Define two respondents
 Trump <- new("Rasch", name = "Trump", a = -3:3, y = c(1, 1, 0, 0, 1, 0, 1))
 Box <- new("Rasch", name = "Box", a = rnorm(5, mean = 1, sd = 1), y = c( 0, 0, 0, 1, 0))
-PlotRasch(Box, -4, 7)
+
+# This will not pass the validity check and throw an error
+Smith <- new("Rasch", name = "Box", a = rnorm(8, mean = 1, sd = 1), y = c( 1, 0, 0, 1, 0))
+
+# Test the probability function
+ProbRasch(Trump, 9)
+ProbRasch(Box, 2)
+
+# Test the Likelihood function
+LikelihoodRasch(Box, 3.3)
+
+# Test the Prior function
+Prior(3.3)
+
+# Test the EAP function
+EAPRasch(Box, -4, 5)
+
+# Test the Plot function
+PlotRasch(Box)
+PlotRasch(Trump, lower=-4, upper=7, EAP=FALSE)
+
+# Test the Fisher's Information function.
+FisherTasch(Box, 3.3)
+
+# Test the Information Curve function.
+InfoCurve(Trump)
