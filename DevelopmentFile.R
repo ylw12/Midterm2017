@@ -22,6 +22,7 @@ check(current.code)
 # --------------Code for reference------------------
 
 PlotRasch(Trump, EAP = FALSE)
+Box <- new("Rasch", name = "Box", a = rnorm(5, mean = 1, sd = 1), y = c( 1, 0, 0, 1, 0))
 
 ## Here is some example code showing how each function works.
 getSquares

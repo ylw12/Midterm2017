@@ -30,3 +30,18 @@ setMethod("initialize", "Rasch",
           }
           ) 
 
+#' @export
+setValidity("Rasch", 
+            function(object){
+              if(sum(is.na(object@a))){
+                return("The question-item parameter, a, contains NAs")
+              }
+              if(sum(is.na(object@y))){
+                return("The answer vector, y, contains NAs")
+              }
+              if(length(object@a) != length(object@y)){
+                return("a and y must be of the same length")
+              }
+            }
+           )
+
