@@ -17,7 +17,6 @@ create("easyRasch")
 current.code <- as.package("easyRasch")
 load_all(current.code)
 document(current.code)
-check(current.code)
 
 # --------------Code for reference------------------
 
@@ -25,23 +24,3 @@ PlotRasch(Trump)
 Trump <- new("Rasch", name = "Trump", a = -3:3, y = c(1, 1, 0, 0, 1, 0, 1))
 Box <- new("Rasch", name = "Box", a = rnorm(5, mean = 1, sd = 1), y = c( 0, 0, 0, 1, 0))
 PlotRasch(Box, -4, 7)
-## Here is some example code showing how each function works.
-getSquares
-getMethod(getSquares, "Squares")
-getMethod(getSquares, "AllSquares")
-getMethod(allSquares)
-
-## Let's try it out
-x<-c(1,2)
-y<-c(3,4)
-allObj <- allSquares(x, y)
-allObj
-getSquares(allObj)
-
-## Moving between classes
-addObj <- addSquares(x,y)
-addObj
-as(object=addObj, Class="AllSquares")
-
-
-

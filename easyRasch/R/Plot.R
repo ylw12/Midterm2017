@@ -37,23 +37,27 @@ setMethod(f="PlotRasch",
                    function(x) lines(theta, prob[x, ], lty = 1))
             if (EAP) {
               abline(v = EAPRasch(raschObj, lower, upper), lty = 2)
-              legend("bottomright",
-                     legend = c("Each line for each question", "Posteriori value"),
-                     lty = c(1, 2),
-                     col = "black",
-                     cex = .5)
-            } else {
-              legend("bottomright",
-                     legend = "Each line for each question",
-                     lty = 1,
-                     col = "black",
-                     cex = .5)
-            }
+              text(-3, 0.7, 
+                   expression(hat(theta) == integral(L*(paste(theta, "|", y))*pi*(theta) * d*theta, -infinity, -infinity)), 
+                   cex = 1.2)
+              arrows(-1.7, 0.7, 0, 0.7, lty = 3)
+              
+              # I decide not to use this legend, and put the formula instand.
+              #legend("bottomright",
+              #       legend = c("Each line for each question", "Posteriori value"),
+              #       lty = c(1, 2),
+              #       col = "black",
+              #       cex = .5)
+              
+            } 
+              # I decide not to use this legend, and put the text instand.
+              # legend("bottomright",
+              #       legend = "Each Question",
+              #       lty = 1,
+              #       col = "black",
+              #       cex = .6)
+            text(4, 0.3, "Each curve") 
+            text(4, 0.25, "is correspondent with")
+            text(4, 0.2,  "each question")
           }
 )
-
-# For reference-------------
-text(-2, 0.3, expression(f(x) == paste(frac(1, sqrt(2 * pi * sigma^2)),
-                                       " ", e^{
-                                         frac(-(x - mu)^2, 2 * sigma^2)
-                                       })), cex = 1.2)
