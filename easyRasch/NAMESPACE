@@ -2,11 +2,13 @@
 
 export(EAPRasch)
 export(LikelihoodRasch)
+export(PlotRasch)
 export(Prior)
 export(ProbRasch)
 exportClasses(Rasch)
 exportMethods(EAPRasch)
 exportMethods(LikelihoodRasch)
+exportMethods(PlotRasch)
 exportMethods(Prior)
 exportMethods(ProbRasch)
 exportMethods(initialize)
