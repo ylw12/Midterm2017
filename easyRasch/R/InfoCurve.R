@@ -33,5 +33,10 @@ setMethod(f="InfoCurve",
                  main = paste("Information Cure for in testing", raschObj@name),
                  type = "l")
             #text(4, 0.8, paste("The sum of", expression(I_i* theta), cex = 0.8)
+            legend("topright",
+                   legend = paste("Agregated", expression(I)),
+                   lty = 1,
+                   col = "black",
+                   cex = .5)
           }
 )
