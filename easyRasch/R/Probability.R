@@ -39,4 +39,3 @@ setMethod(f="ProbRasch",
             return(cbind(P, PQ))
           }
 )
-

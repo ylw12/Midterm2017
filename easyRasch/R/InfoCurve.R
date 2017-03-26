@@ -1,6 +1,6 @@
-#' Plot for Rasch class
+#' Plot the information curve
 #'
-#' Take in a Rasch object and create a plot with several parameters
+#' Make a test information 
 #'
 #' @param raschObj An object of class Rasch
 #' @param lower The lower limites of integration
@@ -20,8 +20,7 @@ setGeneric(name="PlotRasch",
            def=function(raschObj, lower=-6, upper=6, EAP=TRUE)
            {standardGeneric("PlotRasch")}
 )
-raschObj <- Box
-theta <- seq(-4, 7, by = 0.001)
+
 #' @export
 setMethod(f="PlotRasch",
           definition=function(raschObj, lower=-6, upper=6, EAP=TRUE){

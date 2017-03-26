@@ -26,7 +26,7 @@ setGeneric(name="EAPRasch",
 #' @export
 setMethod(f="EAPRasch",
           definition=function(raschObj, lower=-6, upper=6){
-            int <- integrate(f = function(x) LikelihoodRasch(raschObj, x)*Prior(x),
+            int <- integrate(Vectorize(function(x) LikelihoodRasch(raschObj, x)*Prior(x)),
                               lower = lower,
                               upper = upper)
             return(int["value"])
