@@ -10,6 +10,10 @@ PlotRasch(raschObj, lower = -6, upper = 6, EAP = TRUE)
 \arguments{
 \item{raschObj}{An object of class Rasch}
 
+\item{lower}{The lower limites of integration}
+
+\item{upper}{The upper limites of integration}
+
 \item{EAP}{whether to have EAP added to the plot}
 }
 \description{

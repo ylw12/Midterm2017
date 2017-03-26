@@ -3,6 +3,8 @@
 #' Take in a Rasch object and create a plot with several parameters
 #'
 #' @param raschObj An object of class Rasch
+#' @param lower The lower limites of integration
+#' @param upper The upper limites of integration
 #' @param EAP whether to have EAP added to the plot
 #'
 #' @author Luwei Ying

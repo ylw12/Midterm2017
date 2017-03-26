@@ -21,6 +21,8 @@ check(current.code)
 
 # --------------Code for reference------------------
 
+PlotRasch(Trump, EAP = FALSE)
+
 ## Here is some example code showing how each function works.
 getSquares
 getMethod(getSquares, "Squares")
